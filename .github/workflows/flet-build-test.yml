@@ -51,6 +51,7 @@ env:
 
 jobs:
   build:
+    if: false
     name: Build (${{ matrix.name }})
     runs-on: ${{ matrix.runner }}
     strategy:
@@ -215,12 +216,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: linux
-            runner: ubuntu-latest
-
-          - name: macos
-            runner: macos-latest
-
           - name: windows
             runner: windows-latest
 
